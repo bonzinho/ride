@@ -24,7 +24,7 @@ class CreateBoleiasTable extends Migration {
 			$table->date('data_vinda');
 			$table->integer('lugares_disponiveis');
 			$table->decimal('preco', 4,2);
-			$table->integer('boleia_estado');
+			$table->enum('boleia_estado', array('Ativo', 'Inativo', 'Cancelado', 'Match'));
 			$table->integer('zona_embarque')->unsigned();
 			$table->integer('zona_desembarque')->unsigned();
 			$table->timestamps();

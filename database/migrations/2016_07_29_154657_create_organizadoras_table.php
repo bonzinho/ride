@@ -23,13 +23,13 @@ class CreateOrganizadorasTable extends Migration {
 			$table->string('telefone', 20);
 			$table->string('logotipo', 255);
 			$table->enum('estado', array('Ativo', 'Inativo', 'Cancelado'));
-			$table->integer('tipo_id')->unsigned();
+			//$table->integer('tipo_id')->unsigned();
 			$table->timestamps();
 		});
 
 		Schema::table('organizadoras', function($table) {
 			$table->foreign('distrito_id')->references('id')->on('distritos')->onDelete('cascade');			
-			$table->foreign('tipo_id')->references('id')->on('evento_tipos')->onDelete('cascade');
+			//$table->foreign('tipo_id')->references('id')->on('evento_tipos')->onDelete('cascade');
 			
        		
    		});
